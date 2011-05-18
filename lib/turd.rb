@@ -1,0 +1,14 @@
+require 'erb'
+require 'base64'
+require 'mini_magick'
+
+module Turd
+  # An object from BlankSlate simply discards all messages sent to it.
+  autoload :BasicObject, 'turd/basic_object.rb' unless defined? BasicObject
+  autoload :Template,    'turd/template'
+  autoload :Image,       'turd/image'
+  autoload :Partial,     'turd/partial'
+  autoload :Table,       'turd/table'
+  autoload :Content,     'turd/content'
+  autoload :Document,    'turd/document'
+end
