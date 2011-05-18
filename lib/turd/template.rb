@@ -1,8 +1,8 @@
 module Turd
   class Template < BasicObject
-    def initialize(template_path,&block)
+    def initialize(object,template_path)
+      @object = object
       @_template_path = template_path
-      block_given? and instance_eval(&block)
     end
 
     def template_file

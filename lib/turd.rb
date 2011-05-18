@@ -12,7 +12,7 @@ module Turd
   autoload :Content,     'turd/content'
   autoload :Document,    'turd/document'
 
-  autoload :Engine,           'turd/engine'
+  autoload :Engine,      'turd/engine'
 end
 
 #eventually load a real renderer

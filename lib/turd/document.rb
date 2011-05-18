@@ -1,9 +1,5 @@
 module Turd
   class Document < Template
-    def template_file
-      "document.xml.erb"
-    end
-
     def word
       @output = Partial.new("word.xml.erb",yield).build
     end
