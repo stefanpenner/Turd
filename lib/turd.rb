@@ -11,4 +11,9 @@ module Turd
   autoload :Table,       'turd/table'
   autoload :Content,     'turd/content'
   autoload :Document,    'turd/document'
+
+  autoload :Engine,           'turd/engine'
 end
+
+#eventually load a real renderer
+Turd::Engine if defined? Rails
