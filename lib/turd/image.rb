@@ -1,9 +1,11 @@
+require 'open-uri'
 module Turd
   class Image < Template
     def initialize(path, defaults = {})
-      @image = MiniMagick::Image.open("test.jpg")
+      data = open(path) {|file| file.read }
+      @image = MiniMagick::Image.read(data)
       resize_to_fit(defaults[:height],defaults[:width]) if defaults[:height] or defaults[:width]
-      @data = Base64.encode64(open(path).read)
+      @data = Base64.encode64(data)
     end
 
     def resize_to_fit(height,width)
