@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "turd"
   s.version     = Turd::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Stefan Penner"]
+  s.email       = ["stefan.penner@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Ruby/Rails Word Doc renderer}
+  s.description = %q{When a client wants word docs rendered, and you dont feel like typing word 2003 xml by hand}
 
   s.rubyforge_project = "turd"
 
