@@ -1,9 +1,9 @@
 module Turd
   class Image < Template
     def initialize(path, defaults = {})
-      @image = MiniMagick::Image.open("test.jpg")
+      @image = ::MiniMagick::Image.open("test.jpg")
       resize_to_fit(defaults[:height],defaults[:width]) if defaults[:height] or defaults[:width]
-      @data = Base64.encode64(open(path).read)
+      @data = ::Base64.encode64(open(path).read)
     end
 
     def resize_to_fit(height,width)

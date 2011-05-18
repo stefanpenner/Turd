@@ -10,7 +10,7 @@ module Turd
     end
 
     def self.root
-      Pathname.new File.expand_path("../../templates/", __FILE__)
+      ::Pathname.new ::File.expand_path("../../templates/", __FILE__)
     end
 
     def self.read(path)
@@ -30,7 +30,7 @@ module Turd
     end
 
     def template
-      ERB.new raw_template, nil, nil, "@output"
+      ::ERB.new raw_template, nil, nil, "@output"
     end
 
     def build
