@@ -3,6 +3,7 @@ module Turd
     if defined? ActionView
       include ActionView::Helpers::NumberHelper
       include ActionView::Helpers::DateHelper
+      include ActionView::Helpers::TextHelper
     end
 
     def word
