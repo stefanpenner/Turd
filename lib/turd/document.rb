@@ -1,6 +1,10 @@
 module Turd
   class Document < Template
-    include ActionView::Helpers if defined? Rails
+    if defined? ActionView
+      include ActionView::Helpers::NumberHelper
+      include ActionView::Helpers::DateHelper
+    end
+
     def word
       @output = Partial.new("word.xml.erb",yield).build
     end
