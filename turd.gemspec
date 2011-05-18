@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{When a client wants word docs rendered, and you dont feel like typing word 2003 xml by hand}
 
   s.rubyforge_project = "turd"
+  s.add_dependency("mini_magick")
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
