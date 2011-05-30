@@ -22,7 +22,7 @@ module Turd
       larger_delta = height_delta.abs < width_delta.abs ? height_delta : width_delta
 
       @height = actual_height*larger_delta
-      @width  = actual_width*larger_delta
+      @width  = actual_width *larger_delta
 
       [@height,@width]
     end
@@ -37,4 +37,5 @@ module Turd
       end
     end
   end
+
 end
