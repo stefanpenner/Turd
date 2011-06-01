@@ -4,7 +4,7 @@ module Turd
     module Tags
 
       def _clean(words)
-         CGI.escape(words)
+         CGI.escapeHTML(words)
       end
       def body(options = {})
         @output << "<w:body>"
