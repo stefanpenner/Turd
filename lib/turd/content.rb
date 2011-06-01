@@ -3,9 +3,10 @@ module Turd
   class Content
     module Tags
 
-      def _clean(words)
+      def escape(words)
          CGI.escapeHTML(words)
       end
+
       def body(options = {})
         @output << "<w:body>"
         @output << center_property if options[:center]
@@ -26,7 +27,7 @@ module Turd
               <w:pStyle w:val="Heading1" />
             </w:pPr>
             <w:r>
-              <w:t>#{clean(words)}</w:t>
+              <w:t>#{escape(words)}</w:t>
             </w:r>
           </w:p>
         }
@@ -37,7 +38,7 @@ module Turd
             <w:rPr>
               <w: b/>
             </w:rPr>
-            <w:t>#{clean(word)}</w:t>
+            <w:t>#{escape(word)}</w:t>
           </w:r>}
       end
 
@@ -48,7 +49,7 @@ module Turd
             <w:rPr>
               <w:color w:val="#{color}" />
             </w:rPr>
-            <w:t>#{clean(words)}</w:t>
+            <w:t>#{escape(words)}</w:t>
           </w:r>
         </w:p>}
       end
