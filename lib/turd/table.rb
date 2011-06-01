@@ -48,7 +48,7 @@ module Turd
           <w:p wsp:rsidR="00D2695C" wsp:rsidRDefault="00D2695C"
           wsp:rsidP="00D2695C">
             <w:r>
-              <w:t>#{words}</w:t>
+              <w:t>#{escape(words)}</w:t>
             </w:r>
           </w:p>
         </w:tc>

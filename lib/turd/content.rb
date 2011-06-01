@@ -3,8 +3,8 @@ module Turd
   class Content
     module Tags
 
-      def escape(words)
-         CGI.escapeHTML(words || '')
+      def escape(words='')
+         CGI.escapeHTML(words.to_s)
       end
 
       def body(options = {})
