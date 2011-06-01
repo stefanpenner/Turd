@@ -1,7 +1,11 @@
+require 'cgi'
 module Turd
   class Content
     module Tags
 
+      def _clean(words)
+         CGI.escape(words)
+      end
       def body(options = {})
         @output << "<w:body>"
         @output << center_property if options[:center]
@@ -22,10 +26,19 @@ module Turd
               <w:pStyle w:val="Heading1" />
             </w:pPr>
             <w:r>
-              <w:t>#{words}</w:t>
+              <w:t>#{clean(words)}</w:t>
             </w:r>
           </w:p>
         }
+      end
+
+      def b(word)
+        %{<w:r wsp:rsidRPr="00B7092C">
+            <w:rPr>
+              <w: b/>
+            </w:rPr>
+            <w:t>#{clean(word)}</w:t>
+          </w:r>}
       end
 
       def p(words,defaults ={})
@@ -35,7 +48,7 @@ module Turd
             <w:rPr>
               <w:color w:val="#{color}" />
             </w:rPr>
-            <w:t>#{words}</w:t>
+            <w:t>#{clean(words)}</w:t>
           </w:r>
         </w:p>}
       end
