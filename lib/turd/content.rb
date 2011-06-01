@@ -4,7 +4,7 @@ module Turd
     module Tags
 
       def escape(words)
-         CGI.escapeHTML(words)
+         CGI.escapeHTML(words || '')
       end
 
       def body(options = {})
