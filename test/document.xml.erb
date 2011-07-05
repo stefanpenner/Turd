@@ -4,12 +4,12 @@
   <%= render 'styles.xml.erb' %>
   <%= render 'other_stuff.xml.erb' %>
   <% body do %>
-    <% sect do %>
+    <% sect :font => "Mangal" do %>
       <%= h1 "158 Omands Creek Blvd,. Winnipeg, MB" %>
-      <%= image 'test3.jpg', :width => 400, :height => 1000 %>
+      <%#= image 'test3.jpg', :width => 400, :height => 1000 %>
       <%= br %>
       <%= br %>
-      <%= p "Sale Date: January 5, 2010", :color => "blue" %>
+      <%= p "Sale Date: January 5, 2010", :color => "blue", :font => "Mangal" %>
       <%= p "Sale Price: $1,241,000.00 (sworn value)" %>
       <%= p "Vendor: Suncor Energy Inc." %>
       <%= p "image" %>

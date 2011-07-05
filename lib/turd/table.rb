@@ -38,7 +38,10 @@ module Turd
         yield
         @output << %{</w:tr>}
       end
-      def td(words)
+
+      def td(words,defaults={})
+        color      = defaults[:color] || "black"
+        font_name  = defaults[:font]
         %{
         <w:tc>
           <w:tcPr>
@@ -48,6 +51,8 @@ module Turd
           <w:p wsp:rsidR="00D2695C" wsp:rsidRDefault="00D2695C"
           wsp:rsidP="00D2695C">
             <w:r>
+              #{color_tag(color)}
+              #{font_tag(font_name)}
               <w:t>#{escape(words)}</w:t>
             </w:r>
           </w:p>

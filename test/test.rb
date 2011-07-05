@@ -7,5 +7,5 @@ $:.unshift  root + "../lib/"
 require 'turd'
 
 if __FILE__ == $PROGRAM_NAME
-  puts Turd::Document.new({},root + "document.xml.erb" ).build
+ puts Turd::Document.new({},root + "document.xml.erb" ).build
 end
