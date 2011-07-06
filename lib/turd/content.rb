@@ -21,11 +21,10 @@ module Turd
       def font(name=nil)
         name ||= @default_font
 
-        # we need a stack!
-        previous_default_font = @default_font
+        (@font_stack ||= []).push name
         @default_font = name
         yield
-        @default_font = previous_default_font
+        @default_font = @font_stack.pop
       end
 
       def color_tag(color)

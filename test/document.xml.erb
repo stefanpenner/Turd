@@ -3,7 +3,8 @@
   <%= render 'fonts.xml.erb' %>
   <%= render 'styles.xml.erb' %>
   <%= render 'other_stuff.xml.erb' %>
-  <% body do %>
+  <% body :font => "Arial" do %>
+    <%= p "Asdf" %>
     <% sect :font => "Mangal" do %>
       <%= h1 "158 Omands Creek Blvd,. Winnipeg, MB" %>
       <%#= image 'test3.jpg', :width => 400, :height => 1000 %>
@@ -39,4 +40,5 @@
       <%= render "not_sure_what_this_does_yet.xml.erb" %>
     <% end %>
   <% end %>
+  <%= p "Asdf" %>
 <% end %>
