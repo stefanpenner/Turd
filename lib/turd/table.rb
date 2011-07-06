@@ -39,9 +39,7 @@ module Turd
         @output << %{</w:tr>}
       end
 
-      def td(words,defaults={})
-        color      = defaults[:color] || "black"
-        font_name  = defaults[:font]
+      def td(words,options={})
         %{
         <w:tc>
           <w:tcPr>
@@ -51,8 +49,7 @@ module Turd
           <w:p wsp:rsidR="00D2695C" wsp:rsidRDefault="00D2695C"
           wsp:rsidP="00D2695C">
             <w:r>
-              #{color_tag(color)}
-              #{font_tag(font_name)}
+              #{option_tags(options)}
               <w:t>#{escape(words)}</w:t>
             </w:r>
           </w:p>
