@@ -80,8 +80,10 @@ module Turd
 
         output = ""
         output << color_tag(color)    if color
-        output << font_tag(font_name) if font_name
         output << bold_tag            if style == "bold"
+
+        # always call font_tag, a font stack my exist.
+        output << font_tag(font_name)
 
         output
       end
