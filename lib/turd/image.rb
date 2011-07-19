@@ -1,14 +1,20 @@
 require 'open-uri'
+require 'digest/md5'
 module Turd
   class Image < Template
     def initialize(path, defaults = {})
       unless path.to_s[/http:\/\//]
         # some document root prefix on path
       end
+
       data = open(path) {|file| file.read }
+
       @image = MiniMagick::Image.read(data)
+
       resize_to_fit(defaults[:height],defaults[:width]) if defaults[:height] or defaults[:width]
-      @data = Base64.encode64(data)
+
+      @data     = Base64.encode64(data)
+      @image_id = Digest::MD5.hexdigest(data) 
     end
 
     def resize_to_fit(height,width)

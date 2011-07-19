@@ -9,7 +9,7 @@
     stroked="f">
     <o:lock v:ext="edit" aspectratio="t" />
   </v:shapetype>
-  <w:binData w:name="wordml://02000001.jpg"
+  <w:binData w:name="wordml://<%=@image_id%>.jpg"
     xml:space="preserve">
 <%= @data%>
 </w:binData>
@@ -21,7 +21,7 @@
   o:borderbottomcolor="black"
   o:borderrightcolor="black">
   <v:imagedata
-    src="wordml://02000001.jpg"
+    src="wordml://<%=@image_id%>.jpg"
     o:title=""/>
   </v:shape>
 </w:pict>
