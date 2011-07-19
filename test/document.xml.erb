@@ -1,4 +1,5 @@
 <% word do %>
+  <%  root = Pathname.new(File.expand_path("../test/",__FILE__)) %>
   <%= render 'document_properties.xml.erb' %>
   <%= render 'fonts.xml.erb' %>
   <%= render 'styles.xml.erb' %>
@@ -7,7 +8,8 @@
     <%= p "Asdf" %>
     <% sect :font => "Mangal" do %>
       <%= h1 "158 Omands Creek Blvd,. Winnipeg, MB" %>
-      <%#= image 'test3.jpg', :width => 400, :height => 1000 %>
+      <% $stderr.puts root + 'test3.jpg' %>
+      <%= image root + 'test3.jpg', :width => 400, :height => 1000 %>
       <%= br %>
       <%= br %>
       <%= p "Sale Date: January 5, 2010", :color => "blue", :font => "Mangal" %>
