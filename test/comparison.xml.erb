@@ -1,0 +1,36 @@
+<% word do %>
+  <%  root = Pathname.new(File.expand_path("../test/",__FILE__)) %>
+  <%= render 'document_properties.xml.erb' %>
+  <%= render 'fonts.xml.erb' %>
+  <%= render 'styles.xml.erb' %>
+  <%= render 'other_stuff.xml.erb' %>
+  <% body :font => "Arial" do %>
+    <% sect :font => "Mangal" do %>
+      <% sub do %>
+        <%= h1 "This is a Heading" %>
+        <% table(:border_color => "black") do %>
+          <% tr do %>
+            <%= td "", background: 'e5e5e5' %>
+            <%= td "hi", style: 'bold' %>
+            <%= td "hi", style: 'bold' %>
+            <%= td "hi", style: 'bold' %>
+          <% end %>
+          <% tr do %>
+            <%= td "hi", style: 'bold' %>
+            <%= td "hi" %>
+            <%= td "hi" %>
+            <%= td "hi" %>
+          <% end %>
+          <% tr do %>
+            <%= td "hi", style: 'bold' %>
+            <%= td "hi" %>
+            <%= td "hi" %>
+            <%= td "hi" %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= render "not_sure_what_this_does_yet.xml.erb" %>
+    <% end %>
+  <% end %>
+  <%= p "Asdf" %>
+<% end %>

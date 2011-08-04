@@ -33,18 +33,23 @@ module Turd
         @output << "</w:tbl>"
       end
 
-      def tr
+      def tr(options={})
         @output << %{<w:tr wsp:rsidR="00D2695C" wsp:rsidTr="004A6C22">}
         yield
         @output << %{</w:tr>}
       end
 
       def td(words,options={})
+        background = if bg_color = options[:background]
+          %{<w:shd w:val="pct-10" w:color="auto" w:fill="auto" wx:bgcolor="#{bg_color}"/>}
+        else
+          %{<w:shd w:val="clear" w:color="auto" w:fill="auto"/>}
+        end
         %{
         <w:tc>
           <w:tcPr>
             <w:tcW w:w="4428" w:type="dxa" />
-            <w:shd w:val="clear" w:color="auto" w:fill="auto" />
+            #{background}
           </w:tcPr>
           <w:p wsp:rsidR="00D2695C" wsp:rsidRDefault="00D2695C"
           wsp:rsidP="00D2695C">
