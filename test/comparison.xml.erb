@@ -10,27 +10,105 @@
         <%= h1 "This is a Heading" %>
         <% table(:border_color => "black") do %>
           <% tr do %>
-            <%= td "", background: 'e5e5e5' %>
-            <%= td "hi", style: 'bold' %>
-            <%= td "hi", style: 'bold' %>
-            <%= td "hi", style: 'bold' %>
+            <%= td "",        background: 'e5e5e5' %>
+            <%= td "Subject", background: 'e5e5e5', style: 'bold' %>
+            <% 5.times.each do |n| %>
+              <%= td "Sale ##{n+1}", background: 'e5e5e5' %>
+            <%end%>
           <% end %>
           <% tr do %>
-            <%= td "hi", style: 'bold' %>
-            <%= td "hi" %>
-            <%= td "hi" %>
-            <%= td "hi" %>
+            <%= td "Address", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
           <% end %>
           <% tr do %>
-            <%= td "hi", style: 'bold' %>
-            <%= td "hi" %>
-            <%= td "hi" %>
-            <%= td "hi" %>
+            <%= td "Roll Number", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Sale Date", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Sale Price", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Transfer #", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Vendor", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Purchaser", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Zoning", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Site Area (sq.ft.)", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Building Area (sq.ft.)", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Land/Bldg. Ratio", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Construction", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Wall Height (ft.)", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Year Built", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
+          <% end %>
+          <% tr do %>
+            <%= td "Scale Price/sq.ft.", style: 'bold' %>
+            <% 6.times.each do |n| %>
+              <%= td '' %>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>
       <%= render "not_sure_what_this_does_yet.xml.erb" %>
     <% end %>
   <% end %>
-  <%= p "Asdf" %>
 <% end %>
