@@ -3,4 +3,5 @@
 [ ] refactor this spike with real coverage
 [ ] use real templates rather then inline multi line strings
 [ ] read opendoc standard
+  [ ] http://www.ecma-international.org/publications/standards/Ecma-376.htm
 http://openxmldeveloper.org/
